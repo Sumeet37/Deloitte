@@ -2,8 +2,8 @@ import java.util.*;
 
 public class test{
 public static void main(String a[]){
-Scanner sc=new Scanner(system.in);
-String s=sc.nextint();
+Scanner sc=new Scanner(System.in);
+String s=sc.next();
 
 int count;
 
@@ -21,6 +21,7 @@ ch[i]=ch[j];
 ch[j]=t;
 }
 System.out.println(Character.toString(ch));
+System.out.println(count);
 
 }
 }

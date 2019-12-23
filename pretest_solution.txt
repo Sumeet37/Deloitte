@@ -1,26 +1,24 @@
 import java.util.*;
-
 public class test{
 public static void main(String a[]){
 Scanner sc=new Scanner(System.in);
 String s=sc.next();
 
-int count;
+int count=0;
 
-char ch[]=s.tocharArray();
+char ch[]=s.toCharArray();
 
 int len=ch.length;
-char t;
-for(int i=0,int j=len-1;i<j;i++,j--){
+char t[]=new char[len];
+for(int i=0,j=len-1;i<len;i++,j--){
 //swap
-if(ch[i]=='a'|| ch[i]=='e'|| ch[i]=='i'|| ch[i]=='o'|| ch[i]=='u'|| ch[i]=='A'|| ch[i]=='E'|| ch[i]=='I'|| ch[i]=='O'|| ch[i]=='U'){
+t[i]=ch[j];
+if(ch[j]=='a'|| ch[j]=='e'|| ch[j]=='i'|| ch[j]=='o'|| ch[j]=='u'|| ch[j]=='A'|| ch[j]=='E'|| ch[j]=='I'|| ch[j]=='O'|| ch[j]=='U'){
 count++;
 }
-t=ch[i];
-ch[i]=ch[j];
-ch[j]=t;
+
 }
-System.out.println(Character.toString(ch));
+System.out.println(String.valueOf(t));
 System.out.println(count);
 
 }
